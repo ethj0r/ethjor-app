@@ -33,24 +33,21 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="group relative mx-auto w-full max-w-[320px] overflow-hidden md:max-w-[380px] lg:max-w-none md:!h-[500px] md:!rounded-[54px]"
+              className="group relative mx-auto w-full max-w-[320px] md:max-w-[380px] lg:max-w-none"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              style={{
-                height: '420px',
-                borderRadius: '44px',
-              }}
             >
               {/* Card with gradient background */}
               <div 
-                className="relative h-full overflow-hidden md:!rounded-[54px]"
+                className="relative h-full overflow-hidden md:!h-[500px] md:!rounded-[54px]"
                 style={{
+                  height: '420px',
                   background: 'linear-gradient(-90deg, #4a5863ff 0%, #0a0a0a 100%)',
                   borderRadius: '44px',
-                  boxShadow: '0 4px 10px -4px rgba(255, 255, 255, 0.8)',
+                  boxShadow: '0 4px 10px -4px rgba(255, 255, 255, 0.9)',
                 }}
               >
                 {/* Project Image at top - full width, no padding */}

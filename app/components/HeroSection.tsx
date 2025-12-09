@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function HeroSection() {
@@ -88,13 +89,32 @@ export default function HeroSection() {
               Jordhy
             </span>
           </h1>
-          <p className="mb-3 text-sm text-gray-900 md:text-lg">
+          <p className="py-4 mb-3 font-semibold text-gray-900 md:text-lg">
             Computer Science @ ITB
           </p>
           <p className="mx-auto max-w-2xl text-xs text-gray-700 md:text-base leading-tight lg:leading-tight">
             Learning relentlessly. Building intentionally.<br /> Interested in data science,
             machine learning, <br />and software engineering.
           </p>
+          <Link 
+            href="https://linkedin.com/in/ethjor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 mt-6 mb-3 font-[500] text-sm bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
+          >
+            <span>Connect with me</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-4 w-4 md:h-5 md:w-5" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth={2.5}
+              style={{ color: '#a7bed2ff' }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

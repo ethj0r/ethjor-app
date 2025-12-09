@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "2",
-    title: "Web Developer",
+    title: "IT/Web Developer",
     organization: "TEDxITB",
     startDate: "2025-11",
     endDate: "present",

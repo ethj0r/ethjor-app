@@ -100,7 +100,7 @@ export default function HeroSection() {
             href="https://linkedin.com/in/ethjor"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 mt-5 mb-3 font-[400] text-sm bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
+            className="inline-flex items-center gap-1 mt-5 mb-3 font-[400] text-[0.625rem] bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
           >
             <span>Connect with me</span>
             <svg 

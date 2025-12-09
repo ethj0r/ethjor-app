@@ -89,7 +89,7 @@ export default function HeroSection() {
               Jordhy
             </span>
           </h1>
-          <p className="py-4 mb-3 font-semibold text-gray-900 md:text-lg">
+          <p className="mb-3 text-sm text-gray-900 md:text-lg">
             Computer Science @ ITB
           </p>
           <p className="mx-auto max-w-2xl text-xs text-gray-700 md:text-base leading-tight lg:leading-tight">
@@ -100,7 +100,7 @@ export default function HeroSection() {
             href="https://linkedin.com/in/ethjor"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 mt-6 mb-3 font-[500] text-sm bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
+            className="inline-flex items-center gap-1 mt-5 mb-3 font-[400] text-sm bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
           >
             <span>Connect with me</span>
             <svg 

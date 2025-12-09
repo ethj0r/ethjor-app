@@ -58,13 +58,15 @@ export default function HeroSection() {
               style={{
                 width: '500px',
                 height: '324px',
-                borderRadius: '99px',
-                maxWidth: '90vw',
-                boxShadow: '0 4px 10px -4px rgba(28, 28, 28, 1)',
+                maxWidth: '50vw',
+                maxHeight: '40vw',
+                aspectRatio: '500 / 324',
+                borderRadius: 'clamp(30px, 16vw, 99px)',
+                boxShadow: '0 4px 10px -4px rgba(28, 28, 28, 0.6)',
               }}
             >
               <Image
-                src="/profile.heic"
+                src="/profile.webp"
                 alt="Jordhy Branenda"
                 fill
                 className="object-cover"
@@ -77,7 +79,7 @@ export default function HeroSection() {
 
         {/* Hero Text - BELOW PHOTO */}
         <div className="text-center">
-          <h1 className="mb-3 text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mb-3 text-3xl md:text-5xl lg:text-6xl">
             <span className="font-normal text-gray-800">
               {displayText}
               <span className="animate-pulse">|</span>, I'm{" "}
@@ -86,10 +88,10 @@ export default function HeroSection() {
               Jordhy
             </span>
           </h1>
-          <p className="mb-3 text-base text-gray-900 md:text-lg">
+          <p className="mb-3 text-sm text-gray-900 md:text-lg">
             Computer Science @ ITB
           </p>
-          <p className="mx-auto max-w-2xl text-sm text-gray-700 md:text-base leading-tight lg:leading-tight">
+          <p className="mx-auto max-w-2xl text-xs text-gray-700 md:text-base leading-tight lg:leading-tight">
             Learning relentlessly. Building intentionally.<br /> Interested in data science,
             machine learning, <br />and software engineering.
           </p>

@@ -6,12 +6,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6">
           {/* Copyright */}
-          <p className="text-center text-sm text-gray-400 md:text-base">
-            © 2025 Jordhy Branenda. All rights reserved.
+          <p className="text-center font-[500] text-sm text-[#CDCDCD] md:text-base">
+            © 2025 Jordhy Branenda.
           </p>
 
           {/* Social Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-5">
             {/* Email */}
             <Link
               href="mailto:ethgalleryin@example.com"

@@ -27,16 +27,19 @@ export default function ExperiencesSection() {
               <div className="border-t border-gray-300" />
               
               <div className="flex flex-col gap-2 py-5 md:flex-row md:items-center md:justify-between">
-                <div className="flex-1 pl-20 md:pl-20">
-                  <h3 className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text text-lg font-semibold text-transparent md:text-xl">
+                <div className="flex-1 px-4 md:pl-20 md:pr-0">
+                  <h3 className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text text-lg font-semibold text-transparent md:text-xl leading-tight">
                     {experience.title}
                   </h3>
-                  <p className="mt-0.5 text-sm font-semibold text-gray-700 md:text-base">
+                  <p className="mt-0.5 text-sm font-semibold text-gray-700 md:text-base leading-tight">
                     @ {experience.organization}
+                  </p>
+                  <p className="mt-0.5 text-xs text-gray-600 md:hidden leading-tight">
+                    {formatDate(experience.startDate)} – {formatDate(experience.endDate)}
                   </p>
                 </div>
 
-                <div className="flex-shrink-0 pr-20 md:pr-20">
+                <div className="hidden md:block flex-shrink-0 pr-20">
                   <p className="text-sm text-gray-600 md:text-base">
                     {formatDate(experience.startDate)} – {formatDate(experience.endDate)}
                   </p>

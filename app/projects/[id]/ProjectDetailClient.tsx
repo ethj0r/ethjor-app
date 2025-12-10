@@ -63,12 +63,12 @@ export default function ProjectDetailClient({ project }: Props) {
             <>
               <button
                 onClick={prevImage}
-                className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white backdrop-blur-sm transition-all hover:bg-black/60"
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white transition-all hover:scale-110"
                 aria-label="Previous image"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-8 w-8 drop-shadow-lg"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -79,12 +79,12 @@ export default function ProjectDetailClient({ project }: Props) {
               </button>
               <button
                 onClick={nextImage}
-                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white backdrop-blur-sm transition-all hover:bg-black/60"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white transition-all hover:scale-110"
                 aria-label="Next image"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-8 w-8 drop-shadow-lg"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -140,7 +140,7 @@ export default function ProjectDetailClient({ project }: Props) {
         {/* Key Features */}
         {project.keyFeatures && project.keyFeatures.length > 0 && (
           <section className="mb-12">
-            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-semibold text-transparent md:text-3xl">
+            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
               Key Features
             </h2>
             <div className="space-y-0">
@@ -169,7 +169,7 @@ export default function ProjectDetailClient({ project }: Props) {
         {/* Tech Stack */}
         {project.techStack && (
           <section className="mb-12">
-            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-semibold text-transparent md:text-3xl">
+            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
               Tech Stack
             </h2>
             <div className="space-y-3">
@@ -195,7 +195,7 @@ export default function ProjectDetailClient({ project }: Props) {
         {/* Find out more */}
         {project.links && (project.links.github || project.links.website) && (
           <section className="mb-12">
-            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-semibold text-transparent md:text-3xl">
+            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
               Find out more
             </h2>
             <div className="space-y-2">

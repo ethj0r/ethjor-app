@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-[#1E1E1E] py-12">
+    <footer className="relative w-full bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6">
           {/* Copyright */}
-          <p className="text-center font-[500] text-sm text-[#CDCDCD] md:text-base">
+          <p className="text-center font-[500] text-sm text-gray-700 md:text-base">
             © 2025 Jordhy Branenda.
           </p>
 
@@ -20,7 +20,7 @@ export default function Footer() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-400 transition-colors duration-300 group-hover:text-white"
+                className="h-6 w-6 text-gray-500 transition-colors duration-300 group-hover:text-black"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -44,7 +44,7 @@ export default function Footer() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-400 transition-colors duration-300 group-hover:text-white"
+                className="h-6 w-6 text-gray-500 transition-colors duration-300 group-hover:text-black"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -62,7 +62,7 @@ export default function Footer() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-400 transition-colors duration-300 group-hover:text-white"
+                className="h-6 w-6 text-gray-500 transition-colors duration-300 group-hover:text-black"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

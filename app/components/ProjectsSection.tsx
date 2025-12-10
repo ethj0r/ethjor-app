@@ -52,7 +52,7 @@ export default function ProjectsSection() {
               >
                 {/* Project Image at top - full width, no padding */}
                 {project.image && (
-                  <div className="absolute top-0 left-0 right-0 h-48 md:h-64 overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-48 md:h-64 overflow-hidden pointer-events-none">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -67,7 +67,7 @@ export default function ProjectsSection() {
                 )}
                 
                 {/* Content */}
-                <div className="relative flex h-full flex-col px-5 pb-5 pt-6 md:px-6.5 md:pb-6 md:pt-8 lg:px-6.5 lg:pb-5 lg:pt-10">
+                <div className="relative z-10 flex h-full flex-col px-5 pb-5 pt-6 md:px-6.5 md:pb-6 md:pt-8 lg:px-6.5 lg:pb-5 lg:pt-10">
                   {/* Spacer to push content down */}
                   <div className="flex-1" />
                   

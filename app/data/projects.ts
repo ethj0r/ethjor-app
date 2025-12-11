@@ -28,11 +28,11 @@ export const projects: Project[] = [
     description: "Productivity app that combines the Pomodoro Technique with real-time AI object detection.",
     tags: ["React.js", "TensorFlow", "Node.js", "PostgreSQL"],
     image: "/projects/clearo.webp",
-    images: ["/projects/clearo-1.webp", "/projects/clearo-2.webp", "/projects/clearo-3.webp"],
+    images: ["/projects/clearo.webp", "/projects/clearo-2.webp", "/projects/clearo-3.webp"],
     fullDescription: "Clearo is a productivity app that combines the Pomodoro Technique with real-time AI object detection to help user stay focused while studying or working. Using webcam and machine learning, Clearo detects distractions (like smartphones) and tracks user's productivity with points and streak system.",
     keyFeatures: [
       {
-        title: "Pomodoro Time",
+        title: "Pomodoro Timer",
         description: "customizable focus sessions"
       },
       {
@@ -50,8 +50,8 @@ export const projects: Project[] = [
       deployment: "Vercel + Railway"
     },
     links: {
-      github: "https://github.com/ethj0r/clearo",
-      website: "https://clearo.vercel.app"
+      github: "https://github.com/ethj0r/Clearo",
+      website: "https://clearo-by-ethjor.vercel.app"
     }
   },
   {
@@ -61,19 +61,27 @@ export const projects: Project[] = [
     tags: ["Flet", "Python", "PostgreSQL"],
     image: "/projects/yareu.webp",
     images: ["/projects/yareu-1.webp", "/projects/yareu-2.webp", "/projects/yareu-3.webp"],
-    fullDescription: "YAREU is a sustainability-focused platform that enables users to buy/sell items, donate goods or money, and trade-ins in a unified system.",
+    fullDescription: "YAREU - Your Action to Reuse & Unite\nis a sustainability-focused platform that enables users to buy/sell items, donate goods or money, and perform trade-ins in a unified system. Built with Flet (Python) using the MVC architecture, the app integrates PostgreSQL for robust data management and supports modular subsystems such as Donations, Marketplace, Trade-In, and Shipping.",
     keyFeatures: [
       {
         title: "Buy/Sell Marketplace",
-        description: "user-friendly interface for transactions"
+        description: "buy and sell new/preloved items"
       },
       {
         title: "Donation System",
-        description: "support sustainability initiatives"
+        description: "donate money or goods to verified recipients"
       },
       {
         title: "Trade-in Feature",
-        description: "exchange old items for credits"
+        description: "exchange items thru request and approval flows"
+      },
+      {
+        title: "Shipping & Confirmation",
+        description: "manage deliveries and item reception"
+      },
+      {
+        title: "Modular MVC Architecture",
+        description: "clear separation of models, views, and controllers for maintainability"
       }
     ],
     techStack: {
@@ -92,29 +100,34 @@ export const projects: Project[] = [
     tags: ["Next.js", "FastAPI", "Python"],
     image: "/projects/eigen-pustaka.webp",
     images: ["/projects/eigen-pustaka-1.webp", "/projects/eigen-pustaka-2.webp", "/projects/eigen-pustaka-3.webp"],
-    fullDescription: "Eigen Pustaka is a book discovery system that enables users to perform text & image based search, and book recommendations through a fully custom search engine built from scratch.",
+    fullDescription: "Eigen Pustaka is a book discovery system that enables users to perform text based search, image based search, and personalized book recommendations thru a fully custom search engine. The app leverages classical linear algebra algorithms (TF‑IDF, LSA, PCA, SVD) without any external Machine Learning libraries.",
     keyFeatures: [
       {
-        title: "Text Search",
-        description: "custom search engine with TF-IDF"
+        title: "Text Search with Latent Semantics Analysis (LSA)",
+        description: "advanced text-based book search using TF-IDF (Term Frequency-Inverse Document Frequency) and LSA"
       },
       {
-        title: "Image Search",
-        description: "visual book discovery with AI"
+        title: "Image Search with Principal Component Analysis (PCA)",
+        description: "find books using cover images via PCA for dimensionality reduction and similarity matching"
       },
       {
-        title: "Recommendations",
-        description: "personalized book suggestions"
+        title: "Book Recommendations",
+        description: "suggest similar books based on user selected titles using SVD (Singular Value Decomposition) and embedding similarity"
+      },
+      {
+        title: "Custom Linear Algebra Algorithms",
+        description: "fully implemented from scratch without external ML libraries, manual implementation of TF-IDF, LSA, PCA, and SVD"
       }
     ],
     techStack: {
       frontend: "Next.js with TypeScript",
       backend: "FastAPI with Python for search algorithms",
+      // database: "CSV & JSON based datasets",
       deployment: "Vercel + Railway"
     },
     links: {
-      github: "https://github.com/ethj0r/eigen-pustaka",
-      website: "https://eigen-pustaka.vercel.app"
+      // github: "https://github.com/ethj0r/eigen-pustaka",
+      website: "https://eigenpustaka-gkk.cloud"
     }
   },
   {

@@ -140,24 +140,56 @@ export const projects: Project[] = [
     fullDescription: "GRODDIT is a terminal-based social media application that brings the essence of Reddit to your command line with posts, comments, and voting system.",
     keyFeatures: [
       {
-        title: "Post & Comment",
-        description: "create and interact with content"
+        title: "User Management",
+        description: "register accounts, login/logout with secure password hashing"
+      },
+      {
+        title: "Content Creation",
+        description: "create posts in subgroddits (topic-based communities) and comment with nedted replies"
       },
       {
         title: "Voting System",
-        description: "upvote/downvote functionality"
+        description: "Upvote/downvote posts and comments with karma tracking"
       },
       {
-        title: "Terminal UI",
-        description: "fully command-line based interface"
-      }
+        title: "Social Features",
+        description: "Follow/unfollow users, views followers and following lists"
+      },
+      {
+        title: "Profile System",
+        description: "View user profiles with activity statistics and recent posts/comments"
+      },
+      {
+        title: "Smart Feed (Heap based)",
+        description: "personalized feed from followed users with latest/newest sorting using heap data structure"
+      },
+      {
+        title: "Trending Analysis",
+        description: "discover hot topics in subgroddits with keyword frequency "
+      },
+      {
+        title: "Advanced Search (Trie based)",
+        description: "Fast prefix search for users, posts, and subgroddits using trie data structure"
+      },
+      {
+        title: "Friend Recoomendations (BFS Graph)",
+        description: "Suggest friends based on graph traversal using Breadth-First Search (BFS)"
+      },
+      {
+        title: "Content Moderation",
+        description: "Automatic filtering of inappropriate content using blacklist keywords"
+      },
+      {
+        title: "Data Security",
+        description: "Password hashing (FNV-1a) and file encryption (LCG cipher) for secure data storage"
+      },
     ],
     techStack: {
       backend: "C Language with custom data structures",
       deployment: "Command-line application"
     },
     links: {
-      github: "https://github.com/ethj0r/groddit"
+      github: "https://github.com/Labpro-22/if2110-tubes-2025-k01-i-1"
     }
   },
   {

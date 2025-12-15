@@ -90,7 +90,7 @@ export const projects: Project[] = [
       deployment: "Self-hosted"
     },
     links: {
-      github: "https://github.com/ethj0r/yareu"
+      github: "https://github.com/jsndwrd/IF2150-2025-K01-G03-YAREU"
     }
   },
   {
@@ -220,7 +220,7 @@ export const projects: Project[] = [
       deployment: "Desktop application"
     },
     links: {
-      github: "https://github.com/ethj0r/matrix-calculator"
+      github: "https://github.com/ethj0r/IF2123-Geometric-and-Linear-Algebra-MATRIX-CALCULATOR"
     }
   },
   {
@@ -250,12 +250,12 @@ export const projects: Project[] = [
       deployment: "Command-line game"
     },
     links: {
-      github: "https://github.com/ethj0r/pokemon-battle"
+      github: "https://github.com/ethj0r/IF1221-Computational-Logic-POKEMON-BATTLE"
     }
   },
   {
     id: "7",
-    title: "Dummy Project 1",
+    title: "SOON: on dev",
     description: "This is a dummy project for testing pagination functionality.",
     tags: ["React", "TypeScript"],
     image: "/projects/placeholder-1.jpg",
@@ -278,46 +278,5 @@ export const projects: Project[] = [
     links: {
       github: "https://github.com/ethj0r/dummy"
     }
-  },
-  {
-    id: "8",
-    title: "Dummy Project 2",
-    description: "Another dummy project for pagination testing.",
-    tags: ["Vue.js", "Python"],
-    image: "/projects/placeholder-2.jpg",
-    images: ["/projects/placeholder-2.jpg", "/projects/placeholder-2.jpg", "/projects/placeholder-2.jpg"],
-    fullDescription: "Second dummy project for pagination feature testing.",
-    keyFeatures: [
-      {
-        title: "Testing Feature",
-        description: "for pagination testing"
-      }
-    ],
-    techStack: {
-      frontend: "Vue.js",
-      backend: "Python Flask"
-    },
-    links: {
-      github: "https://github.com/ethj0r/dummy2"
-    }
-  },
-  {
-    id: "9",
-    title: "Dummy Project 3",
-    description: "Third dummy project to test multiple pages.",
-    tags: ["Angular", "Node.js"],
-    image: "/projects/placeholder-3.jpg",
-    images: ["/projects/placeholder-3.jpg", "/projects/placeholder-3.jpg", "/projects/placeholder-3.jpg"],
-    fullDescription: "Third dummy project for testing pagination across multiple pages.",
-    keyFeatures: [
-      {
-        title: "Multi-page Test",
-        description: "testing page navigation"
-      }
-    ],
-    techStack: {
-      frontend: "Angular",
-      backend: "Node.js Express"
-    }
-  },
+  }
 ];

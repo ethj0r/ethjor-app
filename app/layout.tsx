@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import StickyBlur from "./components/StickyBlur";
 
 export const metadata: Metadata = {
   title: "Jordhy Branenda - Portfolio",
@@ -21,6 +22,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
+        <StickyBlur />
       </body>
     </html>
   );

@@ -18,12 +18,45 @@ export interface Project {
   links?: {
     github?: string;
     website?: string;
+    doc?: string;
   };
 }
 
 export const projects: Project[] = [
-  {
+    {
     id: "1",
+    title: "Queens",
+    description: "Brute force solver for LinkedIn's Queens game, built for IF2211 Algorithm Strategy course @ STEI ITB.",
+    tags: ["Go", "Fyne"],
+    image: "/projects/queens/1.webp",
+    images: ["/projects/queens/1.webp", "/projects/queens/2.webp", "/projects/queens/3.webp"],
+    fullDescription: "Queens Solver is a desktop application built for the IF2211 Algorithm Strategy course at STEI ITB, aimed at observing the behavior and performance of pure brute force algorithms. The program solves LinkedIn's Queens puzzle, a logic game where each row, column, and color region must contain exactly one queen with no two queens adjacent, by generating all possible placements via Cartesian Product across color regions, then validating each combination exhaustively without any optimization such as backtracking or constraint propagation.",
+    keyFeatures: [
+      {
+        title: "Pure Brute Force",
+        description: "Exhaustive Cartesian Product search with no backtracking, pruning, or heuristics"
+      },
+      {
+        title: "Real-time Visualization",
+        description: "Live GUI updates every 50 iterations showing the solver's current state on the board"
+      },
+      {
+        title: "Performance Analysis",
+        description: "Tracks iteration count and execution time across board sizes from 4×4 up to 12x12"
+      },
+    ],
+    techStack: {
+      frontend: "Fyne GUI framework",
+      backend: "Go",
+      deployment: "Local desktop application"
+    },
+    links: {
+      github: "https://github.com/ethj0r/Tucil1_13524026",
+      doc: "/projects/queens/laporan.pdf"
+    }
+  },
+  {
+    id: "2",
     title: "Clearo",
     description: "Productivity app that combines the Pomodoro Technique with real-time AI object detection.",
     tags: ["React.js", "TensorFlow", "Node.js", "PostgreSQL"],
@@ -55,7 +88,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "2",
+    id: "3",
     title: "YAREU",
     description: "Sustainability-focused platform enables users to buy/sell items, donate goods or money, and trade-ins in a unified system.",
     tags: ["Flet", "Python", "PostgreSQL"],
@@ -94,7 +127,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "3",
+    id: "4",
     title: "Eigen Pustaka",
     description: "Book discovery system enables users to perform text & image based search, and book recommendations thru a fully custom search engine.",
     tags: ["Next.js", "FastAPI", "Python"],
@@ -131,7 +164,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "4",
+    id: "5",
     title: "GRODDIT",
     description: "Terminal based social media application that brings the essence of Reddit to user command line.",
     tags: ["C Lang"],
@@ -193,7 +226,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "5",
+    id: "6",
     title: "Matrix Calculator",
     description: "Featuring System of Linear Equations solver, matrix operations, interpolation, polynomial regression, and seamless cloning.",
     tags: ["Java", "JavaFX"],
@@ -224,7 +257,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "6",
+    id: "7",
     title: "Pokémon Battle",
     description: "Board game using Prolog (GNU Prolog).",
     tags: ["Prolog"],
@@ -254,7 +287,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "7",
+    id: "8",
     title: "SOON: on dev",
     description: "This is a dummy project for testing pagination functionality.",
     tags: ["React", "TypeScript"],

@@ -193,7 +193,7 @@ export default function ProjectDetailClient({ project }: Props) {
         )}
 
         {/* Find out more */}
-        {project.links && (project.links.github || project.links.website) && (
+        {project.links && (project.links.github || project.links.website || project.links.doc) && (
           <section className="mb-12">
             <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
               Find out more
@@ -230,6 +230,28 @@ export default function ProjectDetailClient({ project }: Props) {
                 >
                   <span className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text font-medium text-transparent">
                     Website
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 text-[#0088FF]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              )}
+              {project.links.doc && (
+                <Link
+                  href={`${project.links.doc}#toolbar=0`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm transition-colors hover:text-[#0088FF] md:text-base"
+                >
+                  <span className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text font-medium text-transparent">
+                    Documentation
                   </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

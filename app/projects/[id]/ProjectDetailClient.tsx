@@ -120,7 +120,7 @@ export default function ProjectDetailClient({ project }: Props) {
           {project.tags.map((tag, index) => (
             <span
               key={index}
-              className="rounded-full bg-gradient-to-r from-[#7E9DB8]/50 to-black/40 px-2 py-1 text-sm font-semibold text-gray-800 backdrop-blur"
+              className="rounded-full bg-linear-to-r from-[#7E9DB8]/50 to-black/40 px-2 py-1 text-sm font-semibold text-gray-800 backdrop-blur"
             >
               {tag}
             </span> 
@@ -128,7 +128,7 @@ export default function ProjectDetailClient({ project }: Props) {
         </div>
 
         {/* Title */}
-        <h1 className="mb-4 bg-gradient-to-r from-gray-900 via-[#2F6192] to-gray-600 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-7xl">
+        <h1 className="mb-4 bg-linear-to-r from-gray-900 via-[#2F6192] to-gray-600 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-7xl">
           {project.title}
         </h1>
 
@@ -140,7 +140,7 @@ export default function ProjectDetailClient({ project }: Props) {
         {/* Key Features */}
         {project.keyFeatures && project.keyFeatures.length > 0 && (
           <section className="mb-12">
-            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
+            <h2 className="mb-6 bg-linear-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
               Key Features
             </h2>
             <div className="space-y-0">
@@ -149,7 +149,7 @@ export default function ProjectDetailClient({ project }: Props) {
                   <div className="border-t border-gray-300" />
                   <div className="flex flex-col gap-2 py-5 md:flex-row md:items-center md:justify-between">
                     <div className="flex-1 px-4 md:pl-20 md:pr-0">
-                      <h3 className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text text-lg font-semibold leading-tight text-transparent md:text-xl">
+                      <h3 className="bg-linear-to-r from-[#0088FF] to-[#000000] bg-clip-text text-lg font-semibold leading-tight text-transparent md:text-xl">
                         {feature.title}
                       </h3>
                     </div>
@@ -169,7 +169,7 @@ export default function ProjectDetailClient({ project }: Props) {
         {/* Tech Stack */}
         {project.techStack && (
           <section className="mb-12">
-            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
+            <h2 className="mb-6 bg-linear-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
               Tech Stack
             </h2>
             <div className="space-y-3">
@@ -195,7 +195,7 @@ export default function ProjectDetailClient({ project }: Props) {
         {/* Find out more */}
         {project.links && (project.links.github || project.links.website || project.links.doc) && (
           <section className="mb-12">
-            <h2 className="mb-6 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
+            <h2 className="mb-6 bg-linear-to-r from-black to-gray-500 bg-clip-text text-2xl font-normal text-transparent md:text-3xl">
               Find out more
             </h2>
             <div className="space-y-2">
@@ -206,7 +206,7 @@ export default function ProjectDetailClient({ project }: Props) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm transition-colors hover:text-[#0088FF] md:text-base"
                 >
-                  <span className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text font-medium text-transparent">
+                  <span className="bg-linear-to-r from-[#0088FF] to-[#000000] bg-clip-text font-medium text-transparent">
                     GitHub Repository
                   </span>
                   <svg
@@ -228,7 +228,7 @@ export default function ProjectDetailClient({ project }: Props) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm transition-colors hover:text-[#0088FF] md:text-base"
                 >
-                  <span className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text font-medium text-transparent">
+                  <span className="bg-linear-to-r from-[#0088FF] to-[#000000] bg-clip-text font-medium text-transparent">
                     Website
                   </span>
                   <svg
@@ -250,7 +250,7 @@ export default function ProjectDetailClient({ project }: Props) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm transition-colors hover:text-[#0088FF] md:text-base"
                 >
-                  <span className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text font-medium text-transparent">
+                  <span className="bg-linear-to-r from-[#0088FF] to-[#000000] bg-clip-text font-medium text-transparent">
                     Documentation
                   </span>
                   <svg

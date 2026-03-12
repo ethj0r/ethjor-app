@@ -9,7 +9,7 @@ export default function PublicationsSection() {
     <section className="relative w-full bg-gradient-to-b from-[#E7E7E7] to-white pt-16 md:pt-20 pb-24 md:pb-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center mb-8 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
-          Publications
+          Research Papers
         </h2>
 
         <div className="space-y-0">

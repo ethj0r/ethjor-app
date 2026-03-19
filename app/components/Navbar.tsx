@@ -1,15 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
+  const lastScrollY = useRef(0);
+  const pastHero = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling past ~viewport height (hero section)
-      setVisible(window.scrollY > window.innerHeight * 0.75);
+      const currentY = window.scrollY;
+      const heroThreshold = window.innerHeight * 0.75;
+      const scrollingDown = currentY > lastScrollY.current;
+
+      pastHero.current = currentY > heroThreshold;
+
+      // Only show when past hero AND scrolling down
+      // Hide when scrolling up or still in hero
+      setVisible(pastHero.current && scrollingDown);
+
+      lastScrollY.current = currentY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });

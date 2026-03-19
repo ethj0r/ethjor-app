@@ -362,7 +362,7 @@ export default function ResearchGraphSection() {
             ref={svgRef}
             viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
             className="relative z-[1] w-full h-auto"
-            style={{ touchAction: "none" }}
+            style={{ touchAction: "pan-y" }}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
             onClick={handleBgClick}

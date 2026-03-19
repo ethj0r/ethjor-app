@@ -96,19 +96,19 @@ export default function HeroSection() {
             Learning relentlessly. Building intentionally.<br /> Interested in data science,
             machine learning, <br />and software engineering.
           </p>
-          <Link 
+          <Link
             href="https://linkedin.com/in/ethjor"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 mt-5 mb-3 font-[400] text-[0.625rem] bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
           >
             <span>Connect with me</span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-4 w-4 md:h-5 md:w-5" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 md:h-5 md:w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
               strokeWidth={2.5}
               style={{ color: '#a7bed2ff' }}
             >

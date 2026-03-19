@@ -351,7 +351,7 @@ export default function ResearchGraphSection() {
           style={{
             maxWidth: "900px",
             borderRadius: "44px",
-            boxShadow: "0 4px 10px -4px rgba(255, 255, 255, 0.9), 0 8px 32px -8px rgba(0, 0, 0, 0.15)",
+            border: "1px solid rgba(255, 255, 255, 0.7)",
           }}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -361,7 +361,7 @@ export default function ResearchGraphSection() {
           <svg
             ref={svgRef}
             viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
-            className="w-full h-auto"
+            className="relative z-[1] w-full h-auto"
             style={{ touchAction: "none" }}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
@@ -471,8 +471,7 @@ export default function ResearchGraphSection() {
                       r={radius}
                       fill={`url(#${gradientId})`}
                       filter="url(#rg-node-shadow)"
-                      stroke="rgba(255,255,255,0.2)"
-                      strokeWidth={node.type === "paper" ? 2.5 : 1}
+                      stroke="none"
                     />
 
                     <text
@@ -520,16 +519,16 @@ export default function ResearchGraphSection() {
               <div
                 className="rounded-xl px-4 py-3 text-left shadow-lg"
                 style={{
-                  background: "rgba(10, 10, 10, 0.9)",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
+                  background: "rgba(255, 255, 255, 0.85)",
+                  backdropFilter: "blur(16px) saturate(180%)",
+                  border: "1px solid rgba(255, 255, 255, 0.7)",
                   maxWidth: "240px",
                 }}
               >
-                <p className="text-sm font-semibold text-white">
+                <p className="text-sm font-semibold text-gray-900">
                   {tooltip.node.label}
                 </p>
-                <p className="mt-1 text-xs text-gray-400 leading-relaxed">
+                <p className="mt-1 text-xs text-gray-500 leading-relaxed">
                   {tooltip.node.description}
                 </p>
               </div>
@@ -538,27 +537,27 @@ export default function ResearchGraphSection() {
         </motion.div>
 
         {/* Legend */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-gray-500 md:text-sm">
+        <div className="mt-4 flex flex-col items-center gap-2 md:mt-6 md:flex-row md:justify-center md:gap-6">
           <div className="flex items-center gap-2">
             <span
               className="inline-block h-3 w-3 rounded-full"
               style={{ background: COLORS.paper1 }}
             />
-            <span>Paper 1: Transformer Compression</span>
+            <span className="text-xs font-medium text-gray-700">Paper 1: Transformer Compression</span>
           </div>
           <div className="flex items-center gap-2">
             <span
               className="inline-block h-3 w-3 rounded-full"
               style={{ background: COLORS.paper2 }}
             />
-            <span>Paper 2: KG Anomaly Detection</span>
+            <span className="text-xs font-medium text-gray-700">Paper 2: KG Anomaly Detection</span>
           </div>
           <div className="flex items-center gap-2">
             <span
               className="inline-block h-3 w-3 rounded-full"
               style={{ background: COLORS.shared }}
             />
-            <span>Shared Concept</span>
+            <span className="text-xs font-medium text-gray-700">Shared Concept</span>
           </div>
         </div>
         {/* <p className="mt-3 text-center text-xs text-gray-400">

@@ -44,7 +44,7 @@ export default function HeroSection() {
   }, [displayText, isDeleting, currentGreetingIndex]);
 
   return (
-    <section className="relative w-full bg-white py-12 md:py-16 lg:py-20">
+    <section id="hero" className="relative w-full py-12 md:py-16 lg:py-20" style={{ background: 'var(--background)' }}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Profile Photo - IN THE CENTER */}
         <div className="mb-6 flex justify-center">
@@ -81,18 +81,18 @@ export default function HeroSection() {
         {/* Hero Text - BELOW PHOTO */}
         <div className="text-center">
           <h1 className="mb-3 text-3xl md:text-5xl lg:text-6xl">
-            <span className="font-normal text-gray-800">
+            <span className="font-normal" style={{ color: 'var(--text-primary)' }}>
               {displayText}
               <span className="animate-pulse">|</span>, I'm{" "}
             </span>
-            <span className="bg-gradient-to-r from-black via-[#2F6192] to-white bg-clip-text font-bold text-transparent">
+            <span className="bg-gradient-to-r from-[var(--heading-from)] via-[#2F6192] to-[var(--background)] bg-clip-text font-bold text-transparent">
               Jordhy
             </span>
           </h1>
-          <p className="mb-3 text-sm text-gray-900 md:text-lg">
-            Computer Science @ ITB
+          <p className="mb-3 text-sm md:text-lg" style={{ color: 'var(--foreground)' }}>
+            Computer Science Undergraduate @ ITB
           </p>
-          <p className="mx-auto max-w-2xl text-xs text-gray-700 md:text-base leading-tight lg:leading-tight">
+          <p className="mx-auto max-w-2xl text-xs md:text-base leading-tight lg:leading-tight" style={{ color: 'var(--text-secondary)' }}>
             Learning relentlessly. Building intentionally.<br /> Interested in data science,
             machine learning, <br />and software engineering.
           </p>

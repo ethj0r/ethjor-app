@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function PublicationsSection() {
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#E7E7E7] to-white pt-16 md:pt-20 pb-8 md:pb-16">
+    <section id="publications" className="relative w-full bg-gradient-to-b from-[var(--bg-alt)] to-[var(--background)] pt-16 md:pt-20 pb-8 md:pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center mb-8 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
+        <h2 className="text-center mb-8 bg-gradient-to-r from-[var(--heading-from)] to-[var(--heading-to)] bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
           Research Papers
         </h2>
 
@@ -23,7 +23,7 @@ export default function PublicationsSection() {
               whileHover={{ scale: 1.01, backgroundColor: "rgba(0,0,0,0.02)" }}
             >
               {/* Divider at top */}
-              <div className="border-t border-gray-300" />
+              <div className="border-t border-[var(--border-color)]" />
               
               <div className="flex flex-col gap-2 py-5 md:flex-row md:items-start md:justify-between">
                 <div className="flex-1 px-4 md:pl-20 md:pr-0">
@@ -71,7 +71,7 @@ export default function PublicationsSection() {
             </motion.div>
           ))}
           {/* Final bottom divider */}
-          <div className="border-t border-gray-300" />
+          <div className="border-t border-[var(--border-color)]" />
         </div>
       </div>
     </section>

@@ -7,9 +7,9 @@ export default function ExperiencesSection() {
   const sortedExperiences = sortExperiences(experiences);
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#E7E7E7] to-white pt-16 md:pt-20 pb-24 md:pb-32">
+    <section id="experiences" className="relative w-full bg-gradient-to-b from-[var(--bg-alt)] to-[var(--background)] pt-16 md:pt-20 pb-24 md:pb-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center mb-8 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
+        <h2 className="text-center mb-8 bg-gradient-to-r from-[var(--heading-from)] to-[var(--heading-to)] bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
           Experiences
         </h2>
 
@@ -24,11 +24,11 @@ export default function ExperiencesSection() {
               whileHover={{ scale: 1.01, backgroundColor: "rgba(0,0,0,0.02)" }}
             >
               {/* Divider at top */}
-              <div className="border-t border-gray-300" />
+              <div className="border-t" style={{ borderColor: 'var(--border-color)' }} />
               
               <div className="flex flex-col gap-2 py-5 md:flex-row md:items-center md:justify-between">
                 <div className="flex-1 px-4 md:pl-20 md:pr-0">
-                  <h3 className="bg-gradient-to-r from-[#0088FF] to-[#000000] bg-clip-text text-lg font-semibold text-transparent md:text-xl leading-tight">
+                  <h3 className="bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] bg-clip-text text-lg font-semibold text-transparent md:text-xl leading-tight">
                     {experience.title}
                   </h3>
                   <p className="mt-0.5 text-sm font-semibold text-gray-700 md:text-base leading-tight">
@@ -48,7 +48,7 @@ export default function ExperiencesSection() {
             </motion.div>
           ))}
           {/* Final bottom divider */}
-          <div className="border-t border-gray-300" />
+          <div className="border-t" style={{ borderColor: 'var(--border-color)' }} />
         </div>
       </div>
     </section>

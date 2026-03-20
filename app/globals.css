@@ -3,19 +3,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg-alt: #E7E7E7;
+  --bg-alt-2: #CDCDCD;
+  --heading-from: #000000;
+  --heading-to: #6b7280;
+  --accent-from: #0088FF;
+  --accent-to: #000000;
+  --text-primary: #1f2937;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --border-color: #d1d5db;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -38,7 +41,7 @@ body {
   z-index: 0;
   overflow: hidden;
   border-radius: 9999px;
-  box-shadow: inset 2px 2px 0px -2px rgba(255, 255, 255, 0.5), 
+  box-shadow: inset 2px 2px 0px -2px rgba(255, 255, 255, 0.5),
               inset 0 0 3px 1px rgba(255, 255, 255, 0.3);
   background-color: rgb(0 0 0 / 40%);
   pointer-events: none;

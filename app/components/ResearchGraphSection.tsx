@@ -329,7 +329,7 @@ export default function ResearchGraphSection() {
     edge.target === highlightId;
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-white to-[#E7E7E7] pb-16 md:pb-24">
+    <section id="research" className="relative w-full bg-gradient-to-b from-[var(--background)] to-[var(--bg-alt)] pb-16 md:pb-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

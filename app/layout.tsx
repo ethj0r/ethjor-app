@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import DotNavigation from "./components/DotNavigation";
 import StickyBlur from "./components/StickyBlur";
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <Navbar />
+        <DotNavigation />
         {children}
         <StickyBlur />
       </body>

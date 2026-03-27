@@ -24,7 +24,39 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-    id: "1",
+      id: "1",
+      title: "Voxelith",
+      description: "3D mesh voxelization engine powered by octree spatial decomposition with an interactive software renderer.",
+      tags: ["C++", "Raylib", "Octree", "Divide and Conquer"],
+      image: "/projects/octree/sphere_aft.webp",
+      images: ["/projects/octree/sphere_aft.webp", "/projects/octree/torus_bef.webp", "/projects/octree/torus_aft.webp"],
+      fullDescription: "Voxelith transforms smooth 3D models into beautifully structured voxel representations. At its core, a recursive octree (Divide and Conquer) algorithm decomposes complex meshes into hierarchical cubic units with surgical precision. Every triangle tested. Every empty region pruned. The result is a real-time interactive viewer with a custom software rendering pipeline, depth-sorted face drawing, and cinematic auto-orbit. No GPU abstraction layers, just pure math.",
+      keyFeatures: [
+        {
+          title: "Octree Voxelization",
+          description: "recursive spatial decomposition with SAT-based triangle-box intersection"
+        },
+        {
+          title: "Custom Software Renderer",
+          description: "hand-rolled 4×4 matrix pipeline, painter's algorithm, and depth-sorted face drawing"
+        },
+        {
+          title: "Interactive Viewer",
+          description: "orbit camera, cross-section slicing, explode view, wireframe modes"
+        }
+      ],
+      techStack: {
+        frontend: "Custom software rendering pipeline with Raylib",
+        backend: "C++17 with multithreaded octree construction and Separating Axis Theorem collision",
+        deployment: "GNU Make with automatic platform detection (macOS, Linux, Windows)"
+      },
+      links: {
+        github: "https://github.com/ethj0r/Tucil2_13524026_13524080",
+        doc: "/projects/octree/laporan.pdf"
+      }
+    },
+    {
+    id: "2",
     title: "Queens",
     description: "Brute force solver for LinkedIn's Queens game, built for IF2211 Algorithm Strategy course @ STEI ITB.",
     tags: ["Go", "Fyne"],
@@ -56,7 +88,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "2",
+    id: "3",
     title: "Clearo",
     description: "Productivity app that combines the Pomodoro Technique with real-time AI object detection.",
     tags: ["React.js", "TensorFlow", "Node.js", "PostgreSQL"],
@@ -88,7 +120,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "3",
+    id: "4",
     title: "YAREU",
     description: "Sustainability-focused platform enables users to buy/sell items, donate goods or money, and trade-ins in a unified system.",
     tags: ["Flet", "Python", "PostgreSQL"],
@@ -127,7 +159,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "4",
+    id: "5",
     title: "Eigen Pustaka",
     description: "Book discovery system enables users to perform text & image based search, and book recommendations thru a fully custom search engine.",
     tags: ["Next.js", "FastAPI", "Python"],
@@ -164,7 +196,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "5",
+    id: "6",
     title: "GRODDIT",
     description: "Terminal based social media application that brings the essence of Reddit to user command line.",
     tags: ["C Lang"],
@@ -226,7 +258,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "6",
+    id: "7",
     title: "Matrix Calculator",
     description: "Featuring System of Linear Equations solver, matrix operations, interpolation, polynomial regression, and seamless cloning.",
     tags: ["Java", "JavaFX"],
@@ -257,7 +289,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "7",
+    id: "8",
     title: "Pokémon Battle",
     description: "Board game using Prolog (GNU Prolog).",
     tags: ["Prolog"],
@@ -287,7 +319,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "8",
+    id: "9",
     title: "SOON: on dev",
     description: "This is a dummy project for testing pagination functionality.",
     tags: ["React", "TypeScript"],

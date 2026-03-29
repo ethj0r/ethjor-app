@@ -318,30 +318,4 @@ export const projects: Project[] = [
       github: "https://github.com/ethj0r/IF1221-Computational-Logic-POKEMON-BATTLE"
     }
   },
-  {
-    id: "9",
-    title: "SOON: on dev",
-    description: "This is a dummy project for testing pagination functionality.",
-    tags: ["React", "TypeScript"],
-    image: "/projects/placeholder-1.jpg",
-    images: ["/projects/placeholder-1.jpg", "/projects/placeholder-1.jpg", "/projects/placeholder-1.jpg"],
-    fullDescription: "A dummy project created for testing the pagination feature.",
-    keyFeatures: [
-      {
-        title: "Feature One",
-        description: "first feature description"
-      },
-      {
-        title: "Feature Two",
-        description: "second feature description"
-      }
-    ],
-    techStack: {
-      frontend: "React with TypeScript",
-      deployment: "Testing only"
-    },
-    links: {
-      github: "https://github.com/ethj0r/dummy"
-    }
-  }
 ];

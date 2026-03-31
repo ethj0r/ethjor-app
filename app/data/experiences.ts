@@ -17,14 +17,14 @@ export const experiences: Experience[] = [
   },
   {
     id: "2",
-    title: "IT/Web Developer",
+    title: "Frontend Developer",
     organization: "TEDxITB",
     startDate: "2025-11",
     endDate: "present",
   },
   {
     id: "3",
-    title: "Frontend Engineer",
+    title: "Full-Stack Engineer",
     organization: "IEEE ITB Student Branch",
     startDate: "2025-08",
     endDate: "present",

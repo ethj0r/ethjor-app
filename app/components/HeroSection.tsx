@@ -97,12 +97,12 @@ export default function HeroSection() {
             machine learning, <br />and software engineering.
           </p>
           <Link
-            href="https://linkedin.com/in/ethjor"
+            href="/CV - May.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 mt-5 mb-3 font-[400] text-[0.625rem] bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
           >
-            <span>Connect with me</span>
+            <span>View my résumé</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4 md:h-5 md:w-5"

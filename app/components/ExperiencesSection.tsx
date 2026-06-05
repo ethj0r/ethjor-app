@@ -14,9 +14,9 @@ export default function ExperiencesSection() {
         <h2 className="text-center mb-3 bg-gradient-to-r from-[var(--heading-from)] to-[var(--heading-to)] bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
           Experiences
         </h2>
-        <p className="mx-auto mb-8 max-w-2xl text-center text-base text-gray-600 md:text-lg">
+        {/* <p className="mx-auto mb-8 max-w-2xl text-center text-xs leading-tight text-gray-600 md:text-base">
           Building products with clarity, speed, and personality.
-        </p>
+        </p> */}
 
         <div className="space-y-0">
           {sortedExperiences.map((experience, index) => {
@@ -40,9 +40,9 @@ export default function ExperiencesSection() {
                   aria-expanded={isOpen}
                   className="w-full cursor-pointer text-left"
                 >
-                  <div className="flex flex-col gap-2 py-5 md:flex-row md:items-center md:justify-between">
-                    <div className="flex-1 px-4 md:pl-20 md:pr-8">
-                      <h3 className="bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] bg-clip-text text-lg font-semibold text-transparent md:text-xl leading-tight">
+                  <div className="flex flex-row items-center justify-between gap-2 py-5 md:items-center">
+                    <div className="min-w-0 flex-1 px-4 md:pl-20 md:pr-8">
+                      <h3 className="bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] bg-clip-text text-base font-semibold text-transparent sm:text-lg md:text-xl leading-tight">
                         {experience.title}
                       </h3>
                       <p className="mt-0.5 text-sm font-semibold text-gray-700 md:text-base leading-tight">
@@ -53,7 +53,7 @@ export default function ExperiencesSection() {
                       </p>
                     </div>
 
-                    <div className="flex flex-shrink-0 items-center gap-4 px-4 md:px-0 md:pr-20">
+                    <div className="flex flex-shrink-0 items-center gap-4 pr-4 md:px-0 md:pr-20">
                       <p className="hidden text-sm text-gray-600 md:block md:text-base whitespace-nowrap">
                         {formatDate(experience.startDate)} – {formatDate(experience.endDate)}
                       </p>

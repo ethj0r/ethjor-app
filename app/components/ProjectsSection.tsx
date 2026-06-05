@@ -53,11 +53,8 @@ export default function ProjectsSection() {
           Built with Care
         </h2>
         <div className="mx-auto mb-8 max-w-2xl text-center">
-          <p className="text-base font-medium text-gray-800 md:text-lg">
-            Selected work and milestones from my development journey.
-          </p>
-          <p className="mt-1 text-sm text-gray-600 md:text-base">
-            A mix of production features, experiments, and recognition that shaped how I design and build software.
+          <p className="text-xs font-medium leading-tight text-gray-800 md:text-base">
+            Selected work and milestones from <br className="md:hidden" />my development journey.
           </p>
         </div>
 

@@ -10,14 +10,8 @@ const CAPS_2 = ["DATA SCIENCE", "ALGORITHM DESIGN", "RESEARCH WRITING", "PROJECT
 function Pill({ t, active }: { t: string; active?: boolean }) {
   return (
     <div
+      className="shrink min-w-0 truncate rounded-full px-1.5 py-1 text-center text-[7px] font-medium uppercase leading-none tracking-[0.06em] text-white sm:px-3 sm:py-1.5 sm:text-[10px] sm:tracking-[0.08em] md:px-3.5 md:py-2 md:text-xs"
       style={{
-        padding: "8px 14px",
-        borderRadius: 999,
-        fontSize: 12,
-        fontWeight: 500,
-        letterSpacing: "0.08em",
-        textTransform: "uppercase",
-        color: "#ffffff",
         background: active ? "rgba(30,30,30,0.62)" : "rgba(30,30,30,0.45)",
         backdropFilter: "blur(24px)",
         WebkitBackdropFilter: "blur(24px)",
@@ -127,23 +121,25 @@ export default function HeroSection() {
         </div>
 
         {/* Capabilities — What I build */}
-        <div style={{ marginTop: "64px", position: "relative", textAlign: "center" }}>
+        <div className="relative mt-12 text-center md:mt-16">
           <div className="eyebrow" style={{ color: "rgba(31,41,55,0.55)" }}>What I build</div>
-          <h2 className="h2" style={{ color: "var(--text-primary)" }}>From research papers to production systems.</h2>
-          <div style={{ maxWidth: 900, margin: "34px auto 0", display: "flex", flexDirection: "column", gap: 10, alignItems: "center" }}>
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+          <p className="mx-auto mt-2 max-w-2xl text-xs md:text-base leading-tight lg:leading-tight" style={{ color: "var(--text-secondary)", fontFamily: "var(--font-sans)" }}>
+            From research papers to production systems.
+          </p>
+          <div className="mx-auto mt-6 flex w-full max-w-[900px] flex-col items-stretch gap-1.5 sm:gap-2 md:mt-7 md:gap-2.5">
+            <div className="flex w-full flex-nowrap justify-center gap-1.5 sm:flex-wrap sm:gap-2">
               {CAPS_1.map((t) => (
                 <Pill key={t} t={t} active={t === "MACHINE LEARNING"} />
               ))}
             </div>
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+            <div className="flex w-full flex-nowrap justify-center gap-1.5 sm:flex-wrap sm:gap-2">
               {CAPS_2.map((t) => (
                 <Pill key={t} t={t} />
               ))}
             </div>
           </div>
 
-          <div className="mt-8 flex justify-center">
+          <div className="mt-7 flex justify-center">
             <Link
               href="/CV - June.pdf"
               target="_blank"

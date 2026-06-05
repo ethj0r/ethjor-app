@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState, useEffect } from "react";
+import VerifiedBadge from "./VerifiedBadge";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
@@ -19,31 +19,38 @@ export default function Navbar() {
 
   return (
     <div
-        className="fixed top-4 right-4 z-50 md:top-6 md:right-6 lg:top-8 lg:right-8"
+      style={{
+        position: "fixed",
+        top: 16,
+        left: "50%",
+        transform: visible ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(-12px)",
+        zIndex: 100,
+        opacity: visible ? 1 : 0,
+        pointerEvents: visible ? "auto" : "none",
+        transition: "opacity 0.4s ease, transform 0.4s ease",
+      }}
+    >
+      <div
+        className="glass-dark"
         style={{
-          opacity: visible ? 1 : 0,
-          transform: visible ? "translateY(0)" : "translateY(-12px)",
-          transition: "opacity 0.4s ease, transform 0.4s ease",
-          pointerEvents: visible ? "auto" : "none",
+          borderRadius: 999,
+          padding: "6px 6px 6px 14px",
+          display: "flex",
+          alignItems: "center",
+          gap: 24,
         }}
       >
-        <Link
-          href="https://linkedin.com/in/ethjor"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cluely-btn"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-[14px] w-[14px] md:h-4 md:w-4"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-          <span className="hidden md:inline">Connect with me</span>
-          <span className="md:hidden">Connect</span>
-        </Link>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <VerifiedBadge size={18} />
+          <span style={{ fontFamily: "var(--serif)", fontWeight: 500, fontSize: 19, letterSpacing: "-0.01em" }}>ethjor</span>
+        </div>
+        <nav style={{ display: "flex", gap: 22, fontSize: 13, fontWeight: 500, color: "#ffffff" }}>
+          <a href="#experiences" style={{ textDecoration: "none" }}>Experiences</a>
+          <a href="#publications" style={{ textDecoration: "none" }}>Papers</a>
+          <a href="#projects" style={{ textDecoration: "none" }}>Projects</a>
+        </nav>
+        <button className="cta-pill" style={{ padding: "8px 16px", fontSize: 13 }}>Connect</button>
       </div>
+    </div>
   );
 }

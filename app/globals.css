@@ -13,6 +13,8 @@
   --text-secondary: #374151;
   --text-muted: #6b7280;
   --border-color: #d1d5db;
+  --serif: 'Bodoni Moda', 'Times New Roman', serif;
+  --sans: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 @theme inline {
@@ -25,6 +27,67 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Capabilities section primitives (ref) */
+.sec { position: relative; }
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.70);
+  text-align: center;
+}
+
+.h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(30px, 4.2vw, 44px);
+  line-height: 1.15;
+  text-align: center;
+  margin: 14px 0 0;
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+/* Glass formula — dark frosted grey-black (Navbar) */
+.glass-dark {
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 8px 32px -8px rgba(0, 0, 0, 0.35),
+    0 2px 8px -2px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* CTA pill — gradient button (Navbar) */
+.cta-pill {
+  background: linear-gradient(180deg, #3D75FF 0%, #1E4FD8 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  box-shadow: 0 4px 16px rgba(30, 79, 216, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.40);
+  font-family: var(--sans);
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.cta-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(30, 79, 216, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 /* Liquid Glass Button Effect */

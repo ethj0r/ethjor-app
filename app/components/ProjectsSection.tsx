@@ -49,9 +49,17 @@ export default function ProjectsSection() {
       </svg>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center mb-8 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
+        <h2 className="text-center mb-3 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-3xl font-semibold text-transparent md:text-4xl">
           Built with Care
         </h2>
+        <div className="mx-auto mb-8 max-w-2xl text-center">
+          <p className="text-base font-medium text-gray-800 md:text-lg">
+            Selected work and milestones from my development journey.
+          </p>
+          <p className="mt-1 text-sm text-gray-600 md:text-base">
+            A mix of production features, experiments, and recognition that shaped how I design and build software.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {currentProjects.map((project, index) => (

@@ -4,6 +4,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+const CAPS_1 = ["SOFTWARE DESIGN", "BACKEND SYSTEMS", "DEVOPS & CI/CD", "MACHINE LEARNING"];
+const CAPS_2 = ["DATA SCIENCE", "ALGORITHM DESIGN", "RESEARCH WRITING", "PROJECT MANAGEMENT"];
+
+function Pill({ t, active }: { t: string; active?: boolean }) {
+  return (
+    <div
+      style={{
+        padding: "8px 14px",
+        borderRadius: 999,
+        fontSize: 12,
+        fontWeight: 500,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        color: "#ffffff",
+        background: active ? "rgba(30,30,30,0.62)" : "rgba(30,30,30,0.45)",
+        backdropFilter: "blur(24px)",
+        WebkitBackdropFilter: "blur(24px)",
+        border: `1px solid rgba(255,255,255,${active ? 0.28 : 0.15})`,
+        boxShadow: active
+          ? "0 8px 24px -8px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.28)"
+          : "0 8px 32px -8px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.2)",
+      }}
+    >
+      {t}
+    </div>
+  );
+}
+
 export default function HeroSection() {
   const greetings = ["Hi", "Hello", "안녕", "Bonjour","你好"];
   const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
@@ -96,25 +124,46 @@ export default function HeroSection() {
             Learning relentlessly. Building intentionally.<br /> Interested in data science,
             machine learning, <br />and software engineering.
           </p>
-          <Link
-            href="/CV - June.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 mt-5 mb-3 font-[400] text-[0.625rem] bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
-          >
-            <span>View my résumé</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 md:h-5 md:w-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2.5}
-              style={{ color: '#a7bed2ff' }}
+        </div>
+
+        {/* Capabilities — What I build */}
+        <div style={{ marginTop: "64px", position: "relative", textAlign: "center" }}>
+          <div className="eyebrow" style={{ color: "rgba(31,41,55,0.55)" }}>What I build</div>
+          <h2 className="h2" style={{ color: "var(--text-primary)" }}>From research papers to production systems.</h2>
+          <div style={{ maxWidth: 900, margin: "34px auto 0", display: "flex", flexDirection: "column", gap: 10, alignItems: "center" }}>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+              {CAPS_1.map((t) => (
+                <Pill key={t} t={t} active={t === "MACHINE LEARNING"} />
+              ))}
+            </div>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center" }}>
+              {CAPS_2.map((t) => (
+                <Pill key={t} t={t} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/CV - June.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-[400] text-[0.625rem] bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+              <span>View my résumé</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 md:h-5 md:w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2.5}
+                style={{ color: '#a7bed2ff' }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

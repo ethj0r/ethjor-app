@@ -3,6 +3,7 @@ import ExperiencesSection from "./components/ExperiencesSection";
 import PublicationsSection from "./components/PublicationsSection";
 import ResearchGraphSection from "./components/ResearchGraphSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ChatCTA from "./components/ChatCTA";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <PublicationsSection />
         <ResearchGraphSection />
         <ProjectsSection />
+        <ChatCTA />
         <Footer />
       </main>
     </div>

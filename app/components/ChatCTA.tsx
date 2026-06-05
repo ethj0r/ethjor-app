@@ -82,8 +82,6 @@ export default function ChatCTA() {
   }, [inView]);
 
   const allRevealed = revealed >= BUBBLES.length;
-  // The side of the bubble currently being typed (the next one to appear).
-  const typingSide = revealed < BUBBLES.length ? BUBBLES[revealed].side : "left";
 
   return (
     <section
@@ -94,56 +92,76 @@ export default function ChatCTA() {
         ref={sectionRef}
         className="mx-auto flex max-w-[340px] flex-col gap-2 px-4 sm:max-w-[460px] sm:px-6 lg:px-8"
       >
-        {BUBBLES.slice(0, revealed).map((b, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 8, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ type: "spring", stiffness: 480, damping: 30 }}
-            style={{
-              display: "flex",
-              justifyContent: b.side === "left" ? "flex-start" : "flex-end",
-            }}
-          >
-            <div className={bubbleClass} style={bubbleStyle(b.side)}>
-              {b.text}
+        {BUBBLES.map((b, i) => {
+          const shown = i < revealed;
+          const isTypingHere = typing && i === revealed;
+          return (
+            <div
+              key={i}
+              className="relative flex"
+              style={{ justifyContent: b.side === "left" ? "flex-start" : "flex-end" }}
+            >
+              {/* Reserve final space with an invisible copy so the section height never changes */}
+              <div className={bubbleClass} style={{ ...bubbleStyle(b.side), visibility: "hidden" }}>
+                {b.text}
+              </div>
+
+              {/* Typing indicator occupies this slot until the message arrives */}
+              <AnimatePresence>
+                {isTypingHere && (
+                  <motion.div
+                    key="typing"
+                    initial={{ opacity: 0, y: 8, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.25 }}
+                    className="absolute top-0 flex"
+                    style={{
+                      [b.side === "left" ? "left" : "right"]: 0,
+                      justifyContent: b.side === "left" ? "flex-start" : "flex-end",
+                    }}
+                  >
+                    <TypingDots side={b.side} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* The actual message, overlaid in the reserved slot */}
+              <AnimatePresence>
+                {shown && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ type: "spring", stiffness: 480, damping: 30 }}
+                    className="absolute top-0 flex"
+                    style={{
+                      [b.side === "left" ? "left" : "right"]: 0,
+                      justifyContent: b.side === "left" ? "flex-start" : "flex-end",
+                    }}
+                  >
+                    <div className={bubbleClass} style={bubbleStyle(b.side)}>
+                      {b.text}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
+          );
+        })}
+
+        {/* Button space is reserved too (invisible until revealed) */}
+        <div style={{ marginTop: 30, display: "flex", justifyContent: "center" }}>
+          <motion.div
+            initial={false}
+            animate={{ opacity: allRevealed ? 1 : 0, y: allRevealed ? 0 : 10 }}
+            transition={{ duration: 0.4, delay: allRevealed ? 0.15 : 0 }}
+            style={{ pointerEvents: allRevealed ? "auto" : "none" }}
+          >
+            <Link href="mailto:ethgalleryin@gmail.com" className="cluely-btn">
+              Let&apos;s build
+            </Link>
           </motion.div>
-        ))}
-
-        {/* Typing indicator for the next message */}
-        <AnimatePresence>
-          {typing && !allRevealed && (
-            <motion.div
-              key="typing"
-              initial={{ opacity: 0, y: 8, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.25 }}
-              style={{
-                display: "flex",
-                justifyContent: typingSide === "left" ? "flex-start" : "flex-end",
-              }}
-            >
-              <TypingDots side={typingSide} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <AnimatePresence>
-          {allRevealed && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.15 }}
-              style={{ marginTop: 30, display: "flex", justifyContent: "center" }}
-            >
-              <Link href="mailto:ethgalleryin@gmail.com" className="cluely-btn">
-                Let&apos;s build
-              </Link>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        </div>
       </div>
     </section>
   );

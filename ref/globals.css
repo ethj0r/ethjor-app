@@ -1,0 +1,185 @@
+:root {
+  --black: #000000;
+  --brand-deep: #1E4FD8;
+  --brand: #2C5BE5;
+  --brand-light: #4D7FE8;
+  --brand-soft: #5C8AED;
+  --sky: #B8D1F0;
+  --sky-light: #E0EAF5;
+  --verified: #1D9BF0;
+  --serif: var(--font-bodoni), 'Bodoni Moda', 'Times New Roman', serif;
+  --sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--sans);
+  color: #fff;
+  overflow-x: hidden;
+  background: #000;
+  min-height: 100vh;
+}
+
+/* Each section owns its own gradient; adjacent boundary colors match. */
+.sec { position: relative; }
+
+button, a { color: inherit; }
+
+::selection { background: rgba(29, 155, 240, 0.4); }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Glass formulas */
+.glass-dark {
+  background: rgba(20, 40, 90, 0.30);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: 0 8px 32px rgba(10, 20, 60, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.glass-pill { border-radius: 999px; }
+
+.cta-pill {
+  background: linear-gradient(180deg, #3D75FF 0%, #1E4FD8 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  box-shadow: 0 4px 16px rgba(30, 79, 216, 0.50), inset 0 1px 0 rgba(255, 255, 255, 0.40);
+  font-family: var(--sans);
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.cta-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(30, 79, 216, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+/* Hero profile photo — same visual language as .cta-pill */
+.hero-photo {
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  box-shadow: 0 4px 16px rgba(30, 79, 216, 0.50), inset 0 1px 0 rgba(255, 255, 255, 0.40);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.hero-photo:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(30, 79, 216, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.70);
+  text-align: center;
+}
+
+.h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(30px, 4.2vw, 44px);
+  line-height: 1.15;
+  text-align: center;
+  margin: 14px 0 0;
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  gap: 64px;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+/* Project rail — transform driven by rAF in ProjectCards.jsx for smooth speed lerp */
+.proj-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  padding: 6px 0;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Idle bobbing */
+@keyframes bob {
+  0%, 100% { transform: translateY(-4px) rotate(var(--rot, 0deg)); }
+  50%      { transform: translateY(4px)  rotate(var(--rot, 0deg)); }
+}
+.bob { animation: bob 5.5s ease-in-out infinite; }
+.bob.delay { animation-delay: -2.7s; }
+
+/* Star twinkle */
+@keyframes twinkle {
+  0%, 100% { opacity: var(--o, 0.7); }
+  50%      { opacity: calc(var(--o, 0.7) * 0.35); }
+}
+
+/* Chat bubble entrance */
+@keyframes bubbleIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Card hover — disabled: only the track slows down on hover.
+   pointer-events: none prevents card from capturing clicks/focus so it can't
+   trigger scroll-into-view or other browser side-effects while the marquee runs.
+   Hover still bubbles through to .proj-track for the slowdown transition. */
+.proj-card {
+  transition: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Tablet perspective */
+.tablet-tilt { transform: perspective(1400px) rotateX(2.4deg); }
+
+/* Cloud blobs (CSS-only realistic puffs) */
+.cloud {
+  position: absolute;
+  pointer-events: none;
+  width: 520px;
+  height: 240px;
+  background:
+    radial-gradient(closest-side at 22% 60%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(closest-side at 50% 40%, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0) 72%),
+    radial-gradient(closest-side at 75% 65%, rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(closest-side at 38% 75%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%);
+  filter: blur(2px);
+  opacity: 0.85;
+}
+
+/* Hide scrollbar utility for any inner scrollers */
+.noscroll::-webkit-scrollbar { display: none; }
+.noscroll { scrollbar-width: none; }

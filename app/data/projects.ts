@@ -25,8 +25,39 @@ export interface Project {
 export const projects: Project[] = [
     {
       id: "1",
+      title: "domTraverse",
+      description: "DOM tree traversal visualizer with BFS, DFS, CSS-selector search, and Lowest Common Ancestor, built for IF2211 Algorithm Strategy course @ STEI ITB.",
+      tags: ["Go", "Microsoft Azure", "Next.js", "BFS / DFS", "LCA"],
+      image: "/projects/dom_traverse/dom_2.webp",
+      images: ["/projects/dom_traverse/dom_1.webp", "/projects/dom_traverse/dom_2.webp", "/projects/dom_traverse/dom_3.webp"],
+      fullDescription: "domTraverse takes any HTML page and brings its DOM to life. It scrapes a target URL, parses the raw markup into a real tree, and then animates how classic graph-traversal algorithms walk through it. Watch BFS sweep level by level, DFS plunge deep into branches, and a CSS-selector engine pick out nodes by tag, class, id, and combinators. Pick any two elements and it computes their Lowest Common Ancestor in real time.",
+      keyFeatures: [
+        {
+          title: "BFS & DFS Traversal",
+          description: "level-order and depth-first walks over the parsed DOM, streamed step-by-step with a full visit/match log"
+        },
+        {
+          title: "CSS Selector Search",
+          description: "matches elements by tag, class, id, and combined selectors directly against the live tree"
+        },
+        {
+          title: "Lowest Common Ancestor",
+          description: "computes the LCA of any two selected nodes to reveal their shared structural root"
+        }
+      ],
+      techStack: {
+        frontend: "Next.js 16 + React 19 with Tailwind CSS ",
+        backend: "Go",
+        deployment: "Dockerized + Microsoft Azure VM"
+      },
+      links: {
+        github: "https://github.com/ethj0r/Tubes2_PengenLibur_FE"
+      }
+    },
+    {
+      id: "2",
       title: "Voxelith",
-      description: "3D mesh voxelization engine powered by octree spatial decomposition with an interactive software renderer.",
+      description: "3D mesh voxelization engine powered by octree spatial decomposition, built for IF2211 Algorithm Strategy course @ STEI ITB.",
       tags: ["C++", "Raylib", "Octree", "Divide and Conquer"],
       image: "/projects/octree/sphere_aft.webp",
       images: ["/projects/octree/sphere_aft.webp", "/projects/octree/torus_bef.webp", "/projects/octree/torus_aft.webp"],
@@ -56,7 +87,7 @@ export const projects: Project[] = [
       }
     },
     {
-    id: "2",
+    id: "3",
     title: "Queens",
     description: "Brute force solver for LinkedIn's Queens game, built for IF2211 Algorithm Strategy course @ STEI ITB.",
     tags: ["Go", "Fyne"],
@@ -88,7 +119,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "3",
+    id: "4",
     title: "Clearo",
     description: "Productivity app that combines the Pomodoro Technique with real-time AI object detection.",
     tags: ["React.js", "TensorFlow", "Node.js", "PostgreSQL"],
@@ -120,7 +151,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "4",
+    id: "5",
     title: "YAREU",
     description: "Sustainability-focused platform enables users to buy/sell items, donate goods or money, and trade-ins in a unified system.",
     tags: ["Flet", "Python", "PostgreSQL"],
@@ -159,7 +190,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "5",
+    id: "6",
     title: "Eigen Pustaka",
     description: "Book discovery system enables users to perform text & image based search, and book recommendations thru a fully custom search engine.",
     tags: ["Next.js", "FastAPI", "Python"],
@@ -196,7 +227,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "6",
+    id: "7",
     title: "GRODDIT",
     description: "Terminal based social media application that brings the essence of Reddit to user command line.",
     tags: ["C Lang"],
@@ -258,7 +289,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "7",
+    id: "8",
     title: "Matrix Calculator",
     description: "Featuring System of Linear Equations solver, matrix operations, interpolation, polynomial regression, and seamless cloning.",
     tags: ["Java", "JavaFX"],
@@ -289,7 +320,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "8",
+    id: "9",
     title: "Pokémon Battle",
     description: "Board game using Prolog (GNU Prolog).",
     tags: ["Prolog"],
@@ -316,6 +347,37 @@ export const projects: Project[] = [
     },
     links: {
       github: "https://github.com/ethj0r/IF1221-Computational-Logic-POKEMON-BATTLE"
+    }
+  },
+  {
+    id: "10",
+    title: "Ice Sliding Puzzle Solver",
+    description: "Pathfinding solver for an ice-sliding puzzle. Solved with UCS, GBFS, and A*. Built for IF2211 Algorithm Strategy course @ STEI ITB.",
+    tags: ["C++", "raylib", "UCS / GBFS / A*"],
+    image: "/projects/ice_puzzle/ice_2.webp",
+    images: ["/projects/ice_puzzle/ice_1.webp", "/projects/ice_puzzle/ice_2.webp", "/projects/ice_puzzle/ice_3.webp"],
+    fullDescription: "An ice-sliding puzzle pathfinder where a player can't stop on command — once it moves, it keeps sliding across the ice until it slams into a wall, falls into lava, or reaches the goal. The solver models each resting position as a state and searches for the shortest sequence of slides using classic informed and uninformed algorithms. UCS guarantees optimal cost, GBFS races toward the goal greedily, and A* balances both with five selectable heuristics. A raylib-powered GUI animates the search, letting you drag-and-drop puzzle files and watch the solution unfold tile by tile.",
+    keyFeatures: [
+      {
+        title: "Three Search Algorithms",
+        description: "Uniform Cost Search, Greedy Best-First Search, and A* over the slide-state graph, reporting path cost, nodes visited, and runtime"
+      },
+      {
+        title: "Five Selectable Heuristics",
+        description: "Manhattan, Manhattan + turn/wall penalty, multi-target, Euclidean, and a combined heuristic — each pluggable into A* and GBFS"
+      },
+      {
+        title: "Interactive raylib GUI",
+        description: "drag-and-drop puzzle loading with a board renderer that animates the solver step-by-step, walls, lava, and goal included"
+      }
+    ],
+    techStack: {
+      frontend: "raylib (C++)",
+      backend: "C++",
+      deployment: "Cross-platform CMake build (macOS/Linux/Windows)"
+    },
+    links: {
+      github: "https://github.com/jenka-h/Tucil3_13524026_1354110"
     }
   },
 ];

@@ -141,7 +141,7 @@ export default function HeroSection() {
 
           <div className="mt-7 flex justify-center">
             <Link
-              href="/CV - June.pdf"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 font-[400] text-[0.625rem] bg-gradient-to-r from-[#323b43] to-[#0088ff] bg-clip-text text-transparent md:text-base transition-transform duration-300 hover:scale-105"

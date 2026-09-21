@@ -37,7 +37,15 @@ export default function Navbar() {
           <a href="#publications" className="no-underline">Papers</a>
           <a href="#projects" className="no-underline">Projects</a>
         </nav>
-        <button className="cta-pill" style={{ padding: "8px 16px", fontSize: 13 }}>Connect</button>
+        <a
+          href="https://www.linkedin.com/in/ethjor"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-pill no-underline"
+          style={{ padding: "8px 16px", fontSize: 13 }}
+        >
+          Connect
+        </a>
       </div>
     </div>
   );

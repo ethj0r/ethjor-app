@@ -9,6 +9,14 @@ export interface Publication {
 
 export const publications: Publication[] = [
   {
+    id: "3",
+    title: "Dynamic Programming for Battery Energy Storage Arbitrage Scheduling Considering Capacity Degradation Cost",
+    publisher: "STEI ITB",
+    date: "June 2026",
+    link: "https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2025-2026/Makalah2026/13524026_Made%20Branenda%20Jordhy_Makalah%20Stima.pdf",
+    categories: ["Dynamic Programming", "Energy Storage", "Battery Arbitrage", "Degradation Cost", "Optimal Scheduling", "Algorithm Strategy"],
+  },
+  {
     id: "1",
     title: "Efficient Transformer Compression in Pre-trained Language Models Through Selective Tensor Rank Reduction",
     publisher: "STEI ITB",

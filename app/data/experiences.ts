@@ -37,7 +37,7 @@ export const experiences: Experience[] = [
   {
     id: "2",
     category: "work",
-    title: "DevOps Engineer (Technology Development)",
+    title: "Technology Development",
     organization: "Inkubator IT (IIT)",
     location: "Bandung, West Java",
     startDate: "2026-05",

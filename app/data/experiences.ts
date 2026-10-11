@@ -73,7 +73,7 @@ export const experiences: Experience[] = [
     startDate: "2025-11",
     endDate: "2026-05",
     description: [
-      "Led end-to-end engineering of a competition platform for 250+ users, shipping the full registration and multi-stage submission pipeline (preliminary to final) with Next.js, Prisma, and CockroachDB.",
+      "Led end-to-end engineering of a competition platform for 400+ users, shipping the full registration and multi-stage submission pipeline (preliminary to final) with Next.js, Prisma, and CockroachDB.",
       "Built an internal admin panel for real-time financial verification and submission management, cutting organizers' manual review effort across the event cycle.",
     ],
   },
